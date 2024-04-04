@@ -67,13 +67,13 @@ const ManageRestaurantForm = ({ restaurant, isLoading, onSave }: Props) => {
 
   useEffect(() => {
     if (!restaurant) return;
-    const deliveryPriceFormatted = parseInt(
+    const deliveryPriceFormatted = parseFloat(
       (restaurant.deliveryPrice / 100).toFixed(2)
     );
 
     const menuItemsFormatted = restaurant.menuItems.map((item) => ({
       ...item,
-      price: parseInt((item.price / 100).toFixed(2)),
+      price: parseFloat((item.price / 100).toFixed(2)),
     }));
 
     const updatedRestaurant = {
