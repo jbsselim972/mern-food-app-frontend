@@ -49,7 +49,7 @@ const CuisineFilter = ({
           .map((cuisine) => {
             const isSelected = selectedCuisines.includes(cuisine);
             return (
-              <div className="flex">
+              <div className="flex" key={`cuisine__${cuisine}`}>
                 <input
                   id={`cuisine_${cuisine}`}
                   type="checkbox"

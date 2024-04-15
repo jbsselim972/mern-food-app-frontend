@@ -32,6 +32,7 @@ const SortOptionDropdown = ({ onChange, sortOption }: Props) => {
       <DropdownMenuContent>
         {SORT_OPTIONS.map((option) => (
           <DropdownMenuItem
+            key={`option__${option.value}`}
             className="cursor-pointer"
             onClick={() => onChange(option.value)}
           >
