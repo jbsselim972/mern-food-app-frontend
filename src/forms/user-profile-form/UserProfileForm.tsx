@@ -1,6 +1,5 @@
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
+import LoadingButton from "@/components/LoadingButton";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -11,10 +10,11 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import LoadingButton from "@/components/LoadingButton";
-import { Button } from "@/components/ui/button";
 import { User } from "@/types";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 const formSchema = z.object({
   email: z.string().optional(),
@@ -132,7 +132,7 @@ const UserProfileForm = ({
         {isLoading ? (
           <LoadingButton />
         ) : (
-          <Button type="submit" className="bg-orange-500">
+          <Button type="submit" className="bg-blue-500">
             {buttonText}
           </Button>
         )}

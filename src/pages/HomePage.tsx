@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
-import landingImage from "../assets/landing.png";
-import appDownloadImage from "../assets/appDownload.png";
 import SearchBar, { SearchForm } from "@/components/SearchBar";
+import appDownloadImage from "../assets/appDownload.png";
+import landingImage from "../assets/landing.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -14,9 +14,9 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex flex-col gap-12">
-      <div className="md:px-32 bg-white rounded-lg shadow-md py-8 flex flex-col gap-5 text-center -mt-16">
-        <h1 className="text-5xl font-bold tracking-tight text-orange-600">
+    <div className="flex flex-col gap-12 ">
+      <div className="md:px-32 bg-white rounded-lg shadow-md py-8 flex flex-col gap-5 text-center -mt-16 ">
+        <h1 className="text-5xl font-bold tracking-tight text-blue-600">
           Tuck into a takeway today!
         </h1>
         <span className="text-xl">Food is just a click away!</span>

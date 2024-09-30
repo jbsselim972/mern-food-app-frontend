@@ -1,13 +1,13 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useLocation } from "react-router-dom";
 
-import { Button } from "./ui/button";
-import LoadingButton from "./LoadingButton";
-import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog";
+import { useGetMyUser } from "@/api/MyUserApi";
 import UserProfileForm, {
   UserFormData,
 } from "@/forms/user-profile-form/UserProfileForm";
-import { useGetMyUser } from "@/api/MyUserApi";
+import LoadingButton from "./LoadingButton";
+import { Button } from "./ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 
 type Props = {
   onCheckout: (userFormData: UserFormData) => void;
@@ -34,7 +34,7 @@ const CheckoutButton = ({ onCheckout, disabled, isLoading }: Props) => {
 
   if (!isAuthenticated) {
     return (
-      <Button className="bg-orange-500 flex-1" onClick={onLogin}>
+      <Button className="bg-blue-500 flex-1" onClick={onLogin}>
         Log in to check out
       </Button>
     );
@@ -47,7 +47,7 @@ const CheckoutButton = ({ onCheckout, disabled, isLoading }: Props) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-orange-500 flex-1" disabled={disabled}>
+        <Button className="bg-blue-500 flex-1" disabled={disabled}>
           Go to Check out
         </Button>
       </DialogTrigger>

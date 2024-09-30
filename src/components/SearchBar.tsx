@@ -1,12 +1,12 @@
-import { useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { SearchIcon } from "lucide-react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { SearchIcon } from "lucide-react";
 
-import { Input } from "./ui/input";
-import { Form, FormControl, FormField, FormItem } from "./ui/form";
 import { Button } from "./ui/button";
+import { Form, FormControl, FormField, FormItem } from "./ui/form";
+import { Input } from "./ui/input";
 
 const formSchema = z.object({
   searchQuery: z.string({
@@ -54,7 +54,7 @@ const SearchBar = ({ onSubmit, onReset, placeholder, searchQuery }: Props) => {
         <SearchIcon
           strokeWidth={2.5}
           size={30}
-          className="ml-1 text-orange-500 hidden md:block"
+          className="ml-1 text-blue-500 hidden md:block"
         />
         <FormField
           control={form.control}
@@ -79,7 +79,7 @@ const SearchBar = ({ onSubmit, onReset, placeholder, searchQuery }: Props) => {
         >
           Reset
         </Button>
-        <Button type="submit" className="rounded-full bg-orange-500">
+        <Button type="submit" className="rounded-full bg-blue-500">
           Search
         </Button>
       </form>
